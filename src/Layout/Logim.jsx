@@ -1,0 +1,19 @@
+import React from 'react';
+import { GoogleAuthProvider, getAuth } from "firebase/auth";
+import app from '../firebase.init';
+
+const Logim = () => {
+  const auth =getAuth(app);
+  const provider = new GoogleAuthProvider();
+
+  const handleGoogleSignIn = ()=>{
+    console.log('google mama is coming');
+  }
+  return (
+    <div>
+      <button onClick={handleGoogleSignIn}>Google Login</button>
+    </div>
+  );
+};
+
+export default Logim;
